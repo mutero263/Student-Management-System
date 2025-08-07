@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dormitories - Student Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Dormitory Management</h1>
+    <a href="dashboard.html">← Back to Dashboard</a>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Add New Dormitory</h2>
+      <form id="dormForm">
+        <input type="text" id="dormName" placeholder="Dorm Name" required />
+        <input type="number" id="dormCapacity" placeholder="Capacity" required min="1" />
+        <select id="dormGender" required>
+          <option value="">Gender Policy</option>
+          <option value="Mixed">Mixed</option>
+          <option value="Male">Male Only</option>
+          <option value="Female">Female Only</option>
+        </select>
+        <button type="submit">Add Dormitory</button>
+      </form>
+    </section>
+
+    <section class="form-section">
+      <h2>Assign Student to Dormitory</h2>
+      <form id="assignForm">
+        <select id="assignStudent" required>
+          <option value="">Select Student</option>
+        </select>
+        <select id="assignDorm" required>
+          <option value="">Select Dormitory</option>
+        </select>
+        <button type="submit">Assign Student</button>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <h2>Dormitory List</h2>
+      <table id="dormTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Capacity</th>
+            <th>Occupied</th>
+            <th>Available</th>
+            <th>Gender</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="dormitories.js"></script>
+</body>
+</html>

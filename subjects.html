@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subjects & Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Subject Management</h1>
+    <a href="dashboard.html">← Back to Dashboard</a>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Create Subject</h2>
+      <form id="subjectForm">
+        <input type="text" id="subjectName" placeholder="Subject Name" required />
+        <input type="text" id="subjectCode" placeholder="Subject Code" required />
+        <button type="submit">Add Subject</button>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <h2>Available Subjects</h2>
+      <table id="subjectTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Enrolled Students</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="form-section">
+      <h2>Enroll Student in Subject</h2>
+      <select id="studentSelect" required></select>
+      <select id="subjectSelect" required></select>
+      <button id="enrollBtn">Enroll</button>
+    </section>
+
+    <section class="list-section">
+      <h2>Enrollments</h2>
+      <ul id="enrollmentList"></ul>
+    </section>
+  </main>
+
+  <script src="subjects.js"></script>
+</body>
+</html>

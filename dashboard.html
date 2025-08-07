@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Student Management System</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Student Management System</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="dashboard.html" class="active"><i class="fas fa-chart-line"></i> Overview</a></li>
+        <li><a href="students.html"><i class="fas fa-users"></i> Students</a></li>
+        <li><a href="subjects.html"><i class="fas fa-book"></i> Subjects</a></li>
+        <li><a href="dormitories.html"><i class="fas fa-building"></i> Dormitories</a></li>
+      </ul>
+    </nav>
+    <div class="logout">
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="overview-section">
+      <h2>Dashboard Overview</h2>
+      <p>Welcome to the Student Management System</p>
+
+      <div class="metrics-container">
+        <div class="metric-card">
+          <span class="icon"><i class="fas fa-user-friends"></i></span>
+          <div class="content">
+            <h3>Total Students</h3>
+            <p id="totalStudents">0</p>
+            <small>Registered students</small>
+          </div>
+        </div>
+        <div class="metric-card">
+          <span class="icon"><i class="fas fa-book-open"></i></span>
+          <div class="content">
+            <h3>Total Subjects</h3>
+            <p id="totalSubjects">0</p>
+            <small>Available subjects</small>
+          </div>
+        </div>
+        <div class="metric-card">
+          <span class="icon"><i class="fas fa-bed"></i></span>
+          <div class="content">
+            <h3>Dormitories</h3>
+            <p id="totalDorms">0</p>
+            <small>Available dormitories</small>
+          </div>
+        </div>
+        <div class="metric-card">
+          <span class="icon"><i class="fas fa-chart-pie"></i></span>
+          <div class="content">
+            <h3>Enrollments</h3>
+            <p id="totalEnrollments">0</p>
+            <small>Subject enrollments</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dorms-section">
+      <h2>Dormitory Occupancy</h2>
+      <p>Current occupancy rates for each dormitory.</p>
+
+      <div id="dorms-container" class="metrics-container">
+      </div>
+    </section>
+
+    <section class="student-portal">
+      <h2>Student Portal</h2>
+      <p>Access your student information and manage your enrollments.</p>
+      <p>Use the tabs above</p>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
