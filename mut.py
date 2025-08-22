@@ -4,7 +4,7 @@ try:
     conn = sqlite3.connect('users.db')
     cursor = conn.cursor()
 
-    print("Users (login accounts):")
+    print("User (login accounts):")
     for row in cursor.execute('SELECT username FROM users'):
         print(row)
 
