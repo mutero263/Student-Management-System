@@ -65,6 +65,9 @@ python app.py
 # Run the Frontend Server
 python -m http.server 8000
 
+Open in Browser
+Login: http://localhost:8000/index.html
+
 ## Database Setup
 #Automatic Initialization
 The database users.db is auto-created when you run app.py
